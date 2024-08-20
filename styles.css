@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ff69b4; /* Розовый фон */
+    background-color: #000; /* Черный фон */
     color: #fff; /* Белый цвет текста */
     display: flex;
     flex-direction: column;
@@ -11,29 +11,24 @@ body {
 
 .header {
     width: 100%;
-    background-color: #ff1493; /* Более темный розовый для заголовка */
+    background-color: #333; /* Темно-серый фон для заголовка */
     padding: 20px;
     text-align: center;
     color: #fff;
-    text-shadow: 2px 2px 4px #000; /* Увеличенный черный контур текста */
-    font-size: 2em;
+    font-family: 'Georgia', serif; /* Прописной шрифт */
+    font-size: 2.5em;
+    text-shadow: 1px 1px 3px #000; /* Черный контур текста */
 }
 
 .container {
-    background: #e75480; /* Розовый цвет на 30% темнее */
+    background: #333; /* Темно-серый фон рабочей области */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     max-width: 600px;
     width: 100%;
     margin: 20px;
-}
-
-h1 {
-    margin-bottom: 20px;
-    color: #fff; /* Белый цвет заголовка */
-    text-shadow: 2px 2px 4px #000; /* Увеличенный черный контур текста */
 }
 
 label {
@@ -43,30 +38,42 @@ label {
     text-shadow: 1px 1px 3px #000; /* Черный контур текста */
 }
 
-input[type="number"],
+input[type="number"] {
+    background-color: #2e8b57; /* Зеленый цвет фона поля ввода */
+    color: #fff; /* Белый текст */
+    border: 2px solid #2e8b57; /* Зеленый контур */
+    padding: 5px;
+    border-radius: 5px;
+    width: 100px;
+    margin: 5px 0;
+}
+
 input[type="checkbox"] {
     margin: 5px 0;
 }
 
 button {
-    background-color: #000; /* Черный фон кнопки */
+    background-color: #1877f2; /* Синий-голубой цвет кнопки */
     color: #fff; /* Белый текст на кнопке */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    text-shadow: 1px 1px 2px #fff; /* Белый контур текста */
+    text-shadow: 1px 1px 2px #000; /* Черный контур текста */
 }
 
 button:hover {
-    background-color: #333; /* Темно-серый фон при наведении */
+    background-color: #145dbf; /* Темнее синий-голубой при наведении */
 }
 
 #result {
     margin-top: 20px;
     font-size: 1.2em;
-    word-wrap: break-word;
     color: #fff; /* Белый цвет текста */
-    text-shadow: 1px 1px 3px #000; /* Черный контур текста */
+    text-shadow: 1px 1px 3px #333; /* Серый контур текста */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1877f2; /* Синий-голубой фон для результата */
+    display: inline-block;
 }
