@@ -1,22 +1,34 @@
-document.getElementById('generate').addEventListener('click', function() {
-    const length = parseInt(document.getElementById('length').value);
-    const includeNumbers = document.getElementById('numbers').checked;
-    const includeSpecial = document.getElementById('special').checked;
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('sudoku-grid');
+    const solveButton = document.getElementById('solve-button');
+    const resetButton = document.getElementById('reset-button');
 
-    const lowercase = 'abcdefghijklmnopqrstuvwxyz';
-    const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const numbers = '0123456789';
-    const special = '!@#$%^&*()_+[]{}|;:,.<>?';
-
-    let characters = lowercase + uppercase;
-    if (includeNumbers) characters += numbers;
-    if (includeSpecial) characters += special;
-
-    let result = '';
-    for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        result += characters[randomIndex];
+    // Создание игрового поля
+    function createGrid() {
+        for (let i = 0; i < 81; i++) {
+            const cell = document.createElement('input');
+            cell.type = 'text';
+            cell.maxLength = '1';
+            cell.dataset.index = i;
+            grid.appendChild(cell);
+        }
     }
 
-    document.getElementById('result').textContent = result;
+    createGrid();
+
+    // Функция для сброса игры
+    function resetGame() {
+        const cells = document.querySelectorAll('.grid input');
+        cells.forEach(cell => cell.value = '');
+    }
+
+    // Функция для решения (пустая реализация)
+    function solveGame() {
+        // Здесь будет алгоритм решения
+        alert('Функция решения пока не реализована');
+    }
+
+    solveButton.addEventListener('click', solveGame);
+    resetButton.addEventListener('click', resetGame);
 });
