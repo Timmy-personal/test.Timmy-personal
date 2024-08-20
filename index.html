@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Генератор паролей</title>
+    <title>Судоку</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
-        Генератор паролей
-    </div>
     <div class="container">
-        <label for="length">Длина:</label>
-        <input type="number" id="length" min="1" max="100" value="12">
-        <label for="numbers">Включать числа:</label>
-        <input type="checkbox" id="numbers" checked>
-        <label for="special">Включать специальные символы:</label>
-        <input type="checkbox" id="special">
-        <button id="generate">Сгенерировать</button>
-        <p id="result"></p>
+        <h1>Игра Судоку</h1>
+        <div id="sudoku-grid" class="grid"></div>
+        <button id="solve-button">Решить</button>
+        <button id="reset-button">Сбросить</button>
     </div>
     <script src="script.js"></script>
 </body>
