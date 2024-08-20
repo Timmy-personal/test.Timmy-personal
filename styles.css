@@ -3,31 +3,44 @@ body {
     background-color: #ff69b4; /* Розовый фон */
     color: #fff; /* Белый цвет текста */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: #ff1493; /* Более темный розовый для заголовка */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000; /* Увеличенный черный контур текста */
+    font-size: 2em;
 }
 
 .container {
-    background: #fff; /* Белый фон контейнера */
+    background: #e75480; /* Розовый цвет на 30% темнее */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
 }
 
 h1 {
     margin-bottom: 20px;
     color: #fff; /* Белый цвет заголовка */
-    text-shadow: 1px 1px 2px #000; /* Черный контур текста */
+    text-shadow: 2px 2px 4px #000; /* Увеличенный черный контур текста */
 }
 
 label {
     display: block;
     margin: 10px 0 5px;
     color: #fff; /* Белый цвет текста */
-    text-shadow: 1px 1px 2px #000; /* Черный контур текста */
+    text-shadow: 1px 1px 3px #000; /* Черный контур текста */
 }
 
 input[type="number"],
@@ -55,5 +68,5 @@ button:hover {
     font-size: 1.2em;
     word-wrap: break-word;
     color: #fff; /* Белый цвет текста */
-    text-shadow: 1px 1px 2px #000; /* Черный контур текста */
+    text-shadow: 1px 1px 3px #000; /* Черный контур текста */
 }
