@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #ff69b4; /* Розовый фон */
+    color: #fff; /* Белый цвет текста */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +10,7 @@ body {
 }
 
 .container {
-    background: #fff;
+    background: #fff; /* Белый фон контейнера */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -18,33 +19,41 @@ body {
 
 h1 {
     margin-bottom: 20px;
+    color: #fff; /* Белый цвет заголовка */
+    text-shadow: 1px 1px 2px #000; /* Черный контур текста */
 }
 
 label {
     display: block;
     margin: 10px 0 5px;
+    color: #fff; /* Белый цвет текста */
+    text-shadow: 1px 1px 2px #000; /* Черный контур текста */
 }
 
-input[type="number"] {
-    width: 100px;
+input[type="number"],
+input[type="checkbox"] {
+    margin: 5px 0;
 }
 
 button {
-    background-color: #007bff;
-    color: white;
+    background-color: #000; /* Черный фон кнопки */
+    color: #fff; /* Белый текст на кнопке */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    text-shadow: 1px 1px 2px #fff; /* Белый контур текста */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #333; /* Темно-серый фон при наведении */
 }
 
 #result {
     margin-top: 20px;
     font-size: 1.2em;
     word-wrap: break-word;
+    color: #fff; /* Белый цвет текста */
+    text-shadow: 1px 1px 2px #000; /* Черный контур текста */
 }
