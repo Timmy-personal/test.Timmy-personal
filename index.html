@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Конвертер изображений в PDF</title>
+    <title>Генератор Паролей</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Конвертер изображений в PDF</h1>
-        <input type="file" id="fileInput" accept="image/*">
-        <button id="convertButton">Сгенерировать PDF</button>
-        <a id="downloadLink" style="display: none;">Скачать PDF</a>
+        <h1>Генератор Паролей</h1>
+        <form id="password-form">
+            <label for="length">Длина пароля:</label>
+            <input type="number" id="length" min="1" max="100" value="12">
+            
+            <label for="specials">
+                <input type="checkbox" id="specials">
+                Включать специальные символы
+            </label>
+            
+            <button type="button" onclick="generatePassword()">Сгенерировать пароль</button>
+        </form>
+        
+        <div class="result">
+            <input type="text" id="password" readonly>
+            <button onclick="copyPassword()">Копировать</button>
+        </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
-    <script src="scripts.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
